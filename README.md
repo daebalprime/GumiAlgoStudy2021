@@ -31,8 +31,12 @@ $ git push <remote 이름> master
 
 
 ### :banana: How to Code Review   
-Commit History로 리뷰하는 방법으로 하면 될 것 같습니다. (논의 필요)  
+#### 1. Commit History로 리뷰하는 방법 
 다른 사람이 커밋한 데다가 댓글 다는 방식 =>
-[예시](https://github.com/ohgyun/using-github-for-code-reviews/commit/8a85b15805237214aea83a1131f0548b3b69a2d8)
+[예시](https://github.com/ohgyun/using-github-for-code-reviews/commit/8a85b15805237214aea83a1131f0548b3b69a2d8)    
 
+#### 2. Pull Request로 리뷰하는 방법   
+PR 등록하고 스터디 시간 후 merge하면 됩니다.   
+리뷰는 오픈된 PR에 하면 됩니당.   
+   
 #### 일단 이렇게 정리해 봤습니다,, 보완할 부분 있으면 자유롭게 수정해주세요! :smile:
