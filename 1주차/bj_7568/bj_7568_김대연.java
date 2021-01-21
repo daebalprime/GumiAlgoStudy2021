@@ -31,47 +31,15 @@ public class Main {
 		Arrays.sort(people, new Comparator<Integer[]>() {
 			@Override
 			public int compare(Integer[] a1, Integer[] a2) {
-				return a1[2].compareTo(a2[2]);
-			}
-		});
-//		for (Integer[] a : people) {
-//			for (Integer i : a) {
-//				System.out.print(i+" ");
-//			}
-//			System.out.println();
-//		}
-		Integer prev = -1;
-		Integer rankTmp = 1;
-		for (int i = 0; i < T; i++) {
-			if (people[i][2] != prev) {
-				rankTmp = i+1;
-			}
-			prev = people[i][2]; 
-			people[i][4] = rankTmp;		
-		}
-//		for (Integer[] a : people) {
-//			for (Integer i : a) {
-//				System.out.print(i+" ");
-//			}
-//			System.out.println();
-//		}
-		Arrays.sort(people, new Comparator<Integer[]>() {
-			@Override
-			public int compare(Integer[] a1, Integer[] a2) {
 				return a1[3].compareTo(a2[3]);
 			}
 		});
-//		for (Integer[] a : people) {
-			for (int i = 0; i < people.length; i++) {
-				System.out.print(people[i][2]+1);
-				if (i != people.length-1) {
-					System.out.print(" ");
-				}
+		for (int i = 0; i < people.length; i++) {
+			System.out.print(people[i][2]+1);
+			if (i != people.length-1) {
+				System.out.print(" ");
 			}
-//			System.out.println();
-//		}
-//		for (Integer[] a : people) {
-//			System.out.print(a[4]);
-//		}
+		}
+		sc.close();
 	}
 }
