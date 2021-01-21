@@ -4,7 +4,8 @@ SSAFY 구미 4반 알고리즘 스터디입니다. 다들 화이팅!!
 ### :pencil: Rule  
 - 스터디 시간: 매주 목요일 9시  
 - 일주일 동안 7문제 풀기 (문제는 매주 정하기!!)   
-- [문제 정하는 문서](https://docs.google.com/spreadsheets/d/1r6eQ5l23U5M79ySk9kqvcp5whVD2b5WGxsDOyWUgoC4/edit?usp=sharing)
+- [문제 정하는 문서(임시)](https://docs.google.com/spreadsheets/d/1r6eQ5l23U5M79ySk9kqvcp5whVD2b5WGxsDOyWUgoC4/edit?usp=sharing)
+- [백준 문제집](https://www.acmicpc.net/group/workbook/list/10053)
 
 ### :apple: How to Contribute   
 1. 매주 새 디렉터리를 만듭니다. (ex. 1주차, 2주차 ...)
