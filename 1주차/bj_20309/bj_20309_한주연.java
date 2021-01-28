@@ -2,7 +2,7 @@ package bj_20309;
 
 /*
 11724번 - 연결 요소의 개수
-https://www.acmicpc.net/problem/11724
+https://www.acmicpc.net/problem/20309
 */
 
 import java.util.*;
