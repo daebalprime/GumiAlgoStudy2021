@@ -9,7 +9,6 @@ while True:
     for i in range(1,T):
         groups+=i
     groups*=G
-    #print(groups)
 
     #토너먼트 경기수
     t = A * G + D
