@@ -37,7 +37,11 @@ $ git push <remote 이름> master
 [예시](https://github.com/ohgyun/using-github-for-code-reviews/commit/8a85b15805237214aea83a1131f0548b3b69a2d8)    
 
 #### 2. Pull Request로 리뷰하는 방법   
-PR 등록하고 스터디 시간 후 merge하면 됩니다.   
+[참고](https://wayhome25.github.io/git/2017/07/08/git-first-pull-request-story/)   
+1) 새로운 branch를 하나 만듭니다.  
+2) 새로 만든 branch에 코드를 push합니다.  
+3) push 완료 후 GitHub branch 페이지에 들어오면 Pull Request(PR)할건지 버튼이 생깁니다. 클릭!
+4) 코드 리뷰 받고 <b>스터디 시간 전에 merge</b>하면 됩니다. (merge 후 branch는 삭제해도 됩니다.)
 리뷰는 오픈된 PR에 하면 됩니당.   
    
 #### 일단 이렇게 정리해 봤습니다,, 보완할 부분 있으면 자유롭게 수정해주세요! :smile:
