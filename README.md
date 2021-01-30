@@ -37,7 +37,8 @@ $ git push <remote 이름> master
 [예시](https://github.com/ohgyun/using-github-for-code-reviews/commit/8a85b15805237214aea83a1131f0548b3b69a2d8)    
 
 #### 2. Pull Request로 리뷰하는 방법   
-[참고](https://wayhome25.github.io/git/2017/07/08/git-first-pull-request-story/)   
+- [fork해서 Pull Request 보내는 법](https://wayhome25.github.io/git/2017/07/08/git-first-pull-request-story/)  
+- [fork된 레포지토리 최신상태 유지하는 법](https://jybaek.tistory.com/775)   
 1) 새로운 branch를 하나 만듭니다.  
 2) 새로 만든 branch에 코드를 push합니다.  
 3) push 완료 후 GitHub branch 페이지에 들어오면 Pull Request(PR)할건지 버튼이 생깁니다. 클릭!
