@@ -7,6 +7,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 //git fork test?
+//test/test/test
+//코드작업하고 commit and push하기
 
 //[실버 4] 스택
 //https://www.acmicpc.net/problem/10828
