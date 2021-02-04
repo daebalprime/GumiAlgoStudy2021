@@ -23,8 +23,6 @@ public class bj_4949_손현주 {
 			// 첫번쨰 문자가 . 이고 문자길이가 1이면 입력을 종료한다.
 			if (values.charAt(0) == '.' && values.length() == 1)
 				break;
-			// 스택 맨 위에거 저장할 변수
-			char top = ' ';
 			// 문자를 검사한다.
 			for (int i = 0; i < values.length(); ++i) {
 				char ch = values.charAt(i);
@@ -32,27 +30,14 @@ public class bj_4949_손현주 {
 					st.push(')');
 				} else if (ch == '[') {
 					st.push(']');
-				} else if (ch == ')') {
-					if(st.isEmpty()) { 
-						st.push('(');
-						break;
+				} else if (!st.isEmpty()) {
+					if (ch == ')') {
+						if (st.peek() == ')') //peek 알게되어서 수정! 0204
+							st.pop();
+					} else if (ch == ']') {
+						if (st.peek() == ']')
+							st.pop();
 					}
-					top = st.pop();
-					if (top != ')') {
-						st.push(top);
-						break;
-					}
-				} else if (ch == ']') {
-					if(st.isEmpty()) {
-						st.push('[');
-						break;
-					}
-					top = st.pop();
-					if (top != ']') {
-						st.push(top);
-						break;
-					}
-
 				}
 			}
 			System.out.println(st.isEmpty() ? "yes" : "no");
