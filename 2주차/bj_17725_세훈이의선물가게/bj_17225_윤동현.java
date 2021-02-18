@@ -76,7 +76,7 @@ class BOJ_17225_세훈이의선물가게 {
 			}
 		}
 
-		//t가 86400이므로 최악의 경우 8만번이상의 값이 있을 수 있기때문에 bw 선택
+		//t가 86400이므로 bw 선택
 		bw.write(a.size() + "\n");
 		for(int k:a) bw.write(k+" ");
 		bw.write("\n");
