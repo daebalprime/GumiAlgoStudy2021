@@ -25,12 +25,6 @@ public class Main_bj_17471_게리맨더링_구미_4_김소빈 {
 				s[i][j] = Integer.parseInt(st.nextToken())-1;
 			}
 		}
-//		//입력확인
-//		System.out.println(Arrays.toString(p));
-//		for(int [] t: s) {
-//			System.out.println(Arrays.toString(t));
-//		}
-		
 		subset(0);
 		System.out.println(ans==Integer.MAX_VALUE?-1:ans);
 	}
