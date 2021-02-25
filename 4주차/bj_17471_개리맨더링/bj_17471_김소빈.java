@@ -54,7 +54,7 @@ public class Main_bj_17471_게리맨더링_구미_4_김소빈 {
 		subset(cnt+1);
 	}
 	
-	private static boolean isAvailable() {// BFS
+	private static boolean isAvailable() {// DFS
 		boolean [] visit = new boolean[N];
 		int a = -1;
 		for(int i =0; i < N; i++) {
@@ -72,7 +72,7 @@ public class Main_bj_17471_게리맨더링_구미_4_김소빈 {
 		}
 		if(a == -1 || b == -1) return false;
 		
-		Queue<Integer>q = new LinkedList<>();
+		Deque<Integer>q = new LinkedList<>();
 		q.add(a);
 		visit[a] = true;
 		while(!q.isEmpty()) {
