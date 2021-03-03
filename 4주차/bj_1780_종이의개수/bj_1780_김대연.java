@@ -17,6 +17,7 @@ public class Main {
 				map[i][j] = Integer.parseInt(st.nextToken()) + 1;
 			}
 		}
+		
 		int[] res = divide(map, N, 0, 0);
 		for(int i : res) {
 			sb.append(i+"\n");
