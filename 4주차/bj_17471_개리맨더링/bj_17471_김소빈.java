@@ -63,7 +63,7 @@ public class Main_bj_17471_게리맨더링_구미_4_김소빈 {
 				b = i;
 				break;
 			}
-		}
+		}//각 구역의 첫번째 지역
 		if(a == -1 || b == -1) return false;
 		
 		Deque<Integer>q = new LinkedList<>();
@@ -77,7 +77,7 @@ public class Main_bj_17471_게리맨더링_구미_4_김소빈 {
 				visit[s[now][i]] = true;
 				q.add(s[now][i]);
 			}
-		}
+		}//지역이 연결되었는지 확인
 		
 		q.add(b);
 		visit[b] = true;
