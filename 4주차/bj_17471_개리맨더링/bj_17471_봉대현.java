@@ -21,6 +21,10 @@ public class Main_bj_17471_게리맨더링 {
 		nums = new int[N + 1];// 인덱스에 맞게 구역 인구수저장
 		for (int i = 1; i <= N; i++)
 			nums[i] = stoi(st.nextToken());
+<<<<<<< HEAD
+=======
+		
+>>>>>>> upstream/main
 		for (int i = 1; i < N + 1; i++) {// 구역 인접한 것 입력
 			String s[] = in.readLine().split(" ");
 			graph[i] = new int[stoi(s[0]) + 1];
@@ -28,6 +32,10 @@ public class Main_bj_17471_게리맨더링 {
 				graph[i][j] = stoi(s[j]);
 			}
 		}
+<<<<<<< HEAD
+=======
+		
+>>>>>>> upstream/main
 		// for(int []g:graph)System.out.println(Arrays.toString(g));
 		for (int i = 1; i <= N; i++)
 			combi(0, 1, i);//왼쪽만 선택한다.
