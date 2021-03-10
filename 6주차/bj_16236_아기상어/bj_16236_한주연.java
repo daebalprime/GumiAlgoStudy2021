@@ -17,7 +17,6 @@ public class Main {
 	static int[][] map;
 	static boolean[][] mapInfish;
 	public static void main(String[] args) throws IOException {
-		//System.setIn(new FileInputStream("res/mainInput.txt"));	//제출 할 때 주석해야함
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     	StringTokenizer stk;
     	n = stoi(br.readLine());
@@ -30,13 +29,13 @@ public class Main {
     		for(int j = 0; j < n; j++) {
     			map[i][j] = stoi(stk.nextToken());
     		
-    			if(map[i][j] == 9) {
+    			if(map[i][j] == 9) {	// 상어의 위치
     				y = i;
     				x = j;
     			}
-    			if(map[i][j] != 0 && map[i][j] < size) {
+    			if(map[i][j] != 0 && map[i][j] < size) {	// 현재 상어 크기보다 작은 물고기를 저장
     				fish.add(new Pair(i,j));
-    				mapInfish[i][j] = true;
+    				mapInfish[i][j] = true;				// 앞으로 잡아 먹을 물고기 표시
     			}
     		}
     	}
@@ -50,13 +49,13 @@ public class Main {
     		
     		for(int i = 0; i < fish.size(); i++) {
     			int bfsRst = BFS(fish.get(i), y, x, new boolean[n][n]);
-    			if(bfsRst == -1) {
-    				mapInfish[fish.get(i).y][fish.get(i).x] = false;
-    				fish.remove(i);
+    			if(bfsRst == -1) {		// 먹을 수 없는 물고기의 위치(더 큰 물고기에 막혀서 못가는 경우)
+    				mapInfish[fish.get(i).y][fish.get(i).x] = false;	// 이 물고기는 못먹으므로 표시에서 지운다
+    				fish.remove(i);				// 잡아먹을 물고기 대기열에서 제외
     				i--;
     			}
     			else {
-    				if(bfsRst < dis) {
+    				if(bfsRst < dis) {		// 현재 상어 위치에서 더 가까운 물고기 발견
     					eatF = fish.get(i);
     					dis = bfsRst;
     					idx = i;
@@ -74,26 +73,25 @@ public class Main {
     				}
     			}
     		}
-    		if(isCatch) {
-	    		map[y][x] = 0;
+    		if(isCatch) {	// 물고기를 먹었으면
+	    		map[y][x] = 0;	// 상어 위치를 옮긴다.
 	    		y = eatF.y;
 	    		x = eatF.x;
 	    		eatCnt++;
 	    		result += dis;
-	    		map[y][x] = 9;		// 물고기를 옮긴다.
-	    		mapInfish[y][x] = false;
-	    		if(!fish.isEmpty())
+	    		map[y][x] = 9;		// 상어를 옮긴다.
+	    		mapInfish[y][x] = false;	// 물고기를 먹음
+	    		if(!fish.isEmpty())			// 물고기를 먹음
 	    			fish.remove(idx);
     		}
-    		if(eatCnt == size) {
+    		if(eatCnt == size) {		// 상어 크기 만큼 물고기를 잡아 먹었으면
     			size++;
     			eatCnt = 0;
     			// 사이즈가 커졌으므로 또 자기보다 작은 물고기들을 추가한다.
     			for(int i = 0; i < n; i++) {
     				for(int j = 0; j < n; j++) {
-    					if(map[i][j] != 0 && map[i][j] < size && !mapInfish[y][x]) {
+    					if(map[i][j] != 0 && map[i][j] < size && !mapInfish[y][x]) {	// 이미 먹으려고 표시한 물고기 외에, 새로운 작은 물고기 발견
     	    				fish.add(new Pair(i,j));
-    	    				
     	    			}
     				}
     			}
@@ -109,7 +107,7 @@ public class Main {
 		int dis = 0, cnt = 0, newCnt = 0, ny, nx;
 		boolean isFind = false;
 		Queue<Pair> q = new LinkedList<Pair>();
-		for(int i = 0; i < 4; i++) {
+		for(int i = 0; i < 4; i++) {	// 처음 상어 위치에서 상,하,좌,우 갈수 있는 곳 등록
 			if(Isin(y + dy[i],x + dx[i]) && map[y + dy[i]][x + dx[i]] <= size) {
 				q.add(new Pair(y + dy[i], x + dx[i]));
 				vis[y + dy[i]][x + dx[i]] = true;
@@ -121,7 +119,7 @@ public class Main {
 			dis++;
 			newCnt = 0;
 			for(int idx = 0; idx < cnt; idx++) {
-				Pair nq = q.poll();
+				Pair nq = q.poll();				// 갈 수 있는 위치를 하나 가져온다.
 				ny = nq.y;
 				nx = nq.x;
 				// 물고기를 찾았을 때
@@ -129,7 +127,7 @@ public class Main {
 					isFind = true;
 					break end;
 				}
-				for(int i = 0; i < 4; i++) {
+				for(int i = 0; i < 4; i++) {	// 방문 안한 곳 중 상,하,좌,우 탐색
 					if(Isin(ny + dy[i],nx + dx[i]) && map[ny + dy[i]][nx + dx[i]] <= size && !vis[ny + dy[i]][nx + dx[i]]) {
 						vis[ny + dy[i]][nx + dx[i]] = true;
 						q.add(new Pair(ny + dy[i], nx + dx[i]));
