@@ -7,7 +7,6 @@ public class bj_17070_G5 {
 	static final int sero = 1;							// 세로 타입
 	static final int daegak = 2;						// 대각선 타입
 	static int N, arr[][], cnt =0;
-
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		N = Integer.parseInt(br.readLine());

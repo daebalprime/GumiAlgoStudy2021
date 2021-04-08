@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.*;
 public class bj_1389_S1 {
+	
 	static final int INF = 9999999;
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

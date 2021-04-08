@@ -35,7 +35,6 @@ public class bj_9019_G5 {
 				int S = current == 0 ? max - 1 : current - 1;
 				int L = (current * 10 + (current / 1000)) % max;
 				int R = 1000 * (current % 10) + current / 10;
-				
 				if(!registers[D].isVisited) {		// D명령어 실행
 					registers[D].set(true, current, 'D');
 					q.add(D);
